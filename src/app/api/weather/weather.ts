@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { WeatherApiResponse } from '../../types/weather';
-import { translations } from '../../lib/translations';
+import { translations } from '../../../../public/locales/translations';
 
 export default async function handler(
   req: NextApiRequest,

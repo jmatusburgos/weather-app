@@ -28,7 +28,7 @@ export const useWeather = () => {
       } else {
         setError(result.error || t.fetchError);
       }
-    } catch (err) {
+    } catch (_err) {
       setError(t.networkError);
     } finally {
       setLoading(false);

@@ -3,10 +3,10 @@ import React from 'react';
 interface LanguageSelectorProps {
     language: string;
     onLanguageChange: (lang: string) => void;
-    t: any;
+    t: { language: string };
 }
 
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({ language, onLanguageChange, t }) => {
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ language, onLanguageChange, t, }) => {
     const dropdownStyle = {
         padding: '8px',
         borderRadius: '8px',

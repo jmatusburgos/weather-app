@@ -3,15 +3,16 @@ import { WeatherData } from '../types/weather';
 
 interface WeatherInfoProps {
     weatherData: WeatherData;
-    t: any;
+    t: {
+        feelsLike: string;
+        humidity: string;
+        condition: string;
+    };
     language: string; // Keep for locale-specific date formatting
 }
 
 const WeatherInfo: React.FC<WeatherInfoProps> = ({ weatherData, t, language }) => {
-  const getWeatherIcon = (iconCode: string) => {
-    return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-  };
-
+  
   const formatDate = () => {
     const now = new Date();
     return now.toLocaleDateString(language === 'en' ? 'en-US' : 'es-ES', {

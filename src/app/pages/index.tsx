@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>How's the sky looking today? - Weather App</title>
+        <title>How&apos;s the sky looking today? - Weather App</title>
         <meta name="description" content="Get current weather information for any city worldwide. Check temperature, humidity, and weather conditions with a beautiful modern interface." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="weather, temperature, humidity, forecast, climate, sky" />

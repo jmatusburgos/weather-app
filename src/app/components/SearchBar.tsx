@@ -21,13 +21,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const [city, setCity] = useState('');
   const t = translations[language as keyof typeof translations] || translations.en;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
       e.preventDefault();
       onSearch(city, language);
   };
   const handleKeyPress = (e: React.KeyboardEvent) => {
       if (e.key === 'Enter') {
-          handleSubmit(e as any);
+          handleSubmit(e);
       }
   };
 
