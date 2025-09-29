@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aplicación del Clima
 
-## Getting Started
+Una aplicación del clima simple y elegante construida con Next.js, React y TypeScript. Permite a los usuarios buscar la información meteorológica actual de cualquier ciudad del mundo, con soporte para inglés y español.
 
-First, run the development server:
+## Características
 
-```bash
+- **Datos del Clima Actual:** Obtén información del clima en tiempo real, incluyendo temperatura, sensación térmica, humedad y condiciones actuales.
+- **Búsqueda por Ciudad:** Busca fácilmente información del clima para cualquier ciudad del mundo.
+- **Soporte Multi-idioma:** La interfaz de usuario y las descripciones del clima están disponibles en inglés y español.
+- **Diseño Responsivo:** Una interfaz de usuario limpia, moderna y responsiva que proporciona una gran experiencia de usuario tanto en computadoras de escritorio como en dispositivos móviles.
+- **Manejo de Errores:** Se proporciona retroalimentación clara para búsquedas no válidas o problemas de red.
+
+## Tutorial de Instalación
+
+
+Sigue estas instrucciones para obtener una copia del proyecto y ponerla en marcha en tu máquina local para desarrollo y pruebas.
+
+### Pre-Requisitos
+
+Asegúrate de tener lo siguiente instalado en tu sistema:
+
+- [Node.js](https://nodejs.org/) (se recomienda v20.x o posterior)
+- [npm](https://www.npmjs.com/) (viene con Node.js)
+
+### Instalación
+
+1.  **Clona el repositorio:**
+
+    ```sh
+    git clone https://github.com/tu-usuario/weather-app.git
+    cd weather-app
+    ```
+
+2.  **Instala las dependencias:**
+
+    Ejecuta el siguiente comando para instalar todas las dependencias necesarias del proyecto:
+
+    ```sh
+    npm install
+    ```
+
+3.  **Configura las variables de entorno:**
+
+    Este proyecto requiere una clave de API de [OpenWeatherMap](https://openweathermap.org/api) para obtener los datos del clima.
+
+    Crea un archivo llamado `.env.local` en la raíz de tu proyecto y agrégale tu clave de API:
+
+    ```
+    OPENWEATHERMAP_API_KEY=tu_clave_de_api_aqui
+    ```
+
+    Reemplaza `tu_clave_de_api_aqui` con tu clave de API real de OpenWeatherMap.
+
+## Ejecutando la Aplicación
+
+Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+La aplicacion estara disponible en el siguiente enlace:
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Tests
+Este proyecto usa Jest y React Testing Library para las pruebas unitarias.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para correr las pruebas ejecute:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm test
+```
+Para correr las pruebas en modo interactivo:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npm run test:watch
+```
